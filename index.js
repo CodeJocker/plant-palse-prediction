@@ -3,12 +3,16 @@ import multer from 'multer';
 import fs from 'fs';
 import 'dotenv/config';
 import cors from "cors"
+import os from "os";
+import path from "path";    
 
 import { GoogleGenAI, HarmCategory, HarmBlockThreshold } from '@google/genai';
 
 const app = express();
-const upload = multer({ dest: 'uploads/' });
 
+const upload = multer({
+  dest: path.join(os.tmpdir(), "uploads/"), // e.g., '/tmp/uploads/' on Vercel
+});
 app.use(
   cors({
     origin: "*", // or ["http://localhost:3000"] for your React app only
