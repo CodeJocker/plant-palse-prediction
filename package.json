@@ -1,0 +1,21 @@
+{
+    "name": "node-server",
+    "version": "1.0.0",
+    "description": "Node.js server for plant disease detection using Gemini API.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "dependencies": {
+        "@google/genai": "^1.14.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "install": "^0.13.0",
+        "multer": "^1.4.5-lts.1",
+        "nodemon": "^3.1.10",
+        "npm": "^11.5.2"
+    }
+}
